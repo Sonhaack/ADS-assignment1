@@ -1,9 +1,21 @@
 package Operand;
 
-public class Operator extends token {
+import Calc.CalculatorVisitor;
+
+public class Operator extends Token {
 
     private Operation operation;
 
-    public void
+    public Operator(Operation operation) {
+        this.operation = operation;
+    }
 
+    public Operation getOperation() {
+        return operation;
+    }
+
+    @Override
+    public void accept(CalculatorVisitor visitor) {
+
+    }
 }

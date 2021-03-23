@@ -1,12 +1,17 @@
 package Operand;
 
-public class Operand extends token {
+import Calc.CalculatorVisitor;
+
+public class Operand extends Token {
 
 
     private int value;
 
-    public void accept(CalculatorVisitor){}
+    public int getValue()
+    {return value;}
 
-    public int getValue(){return value}
+    @Override
+    public void accept(CalculatorVisitor visitor) {
 
+    }
 }

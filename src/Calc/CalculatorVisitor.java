@@ -1,5 +1,7 @@
 package Calc;
 import Exceptions.MalformedExpressionException;
+import Operand.Operator;
+import Operand.Token;
 
 import java.util.Stack;
 
@@ -25,4 +27,5 @@ public class CalculatorVisitor implements Calculator, Visitor {
     public void visit(Operator operator) {
 
     }
+
 }
