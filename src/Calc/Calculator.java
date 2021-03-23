@@ -1,4 +1,7 @@
 package Calc;
 
-public class Calculator {
+import Exceptions.MalformedExpressionException;
+
+public interface Calculator {
+    public int getResult() throws MalformedExpressionException, MalformedExpressionException;
 }
