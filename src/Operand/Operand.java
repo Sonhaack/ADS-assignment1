@@ -10,7 +10,7 @@ public class Operand extends Token {
 
     public int getValue()
     {
-        return value
+        return value;
     }
 
     @Override
