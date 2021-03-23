@@ -9,18 +9,20 @@ import java.util.Stack;
 
 public class CalculatorVisitor implements Calculator, Visitor {
 
-    private Token tokenStack;
-    private LinkedStack linkedStack;
+    //private Stack<Token> tokenStack;
+    private LinkedStack<Token> linkedStack ;
+
 
 
     @Override
     public int getResult() throws MalformedExpressionException {
-        int r;
 
         try{
+            linkedStack.pop();
 
+        } catch (Exception e) {
+            e.printStackTrace();
         }
-
 
 
         return 0;

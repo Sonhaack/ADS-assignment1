@@ -1,27 +1,32 @@
 package List;
 
 import java.util.EmptyStackException;
+import java.util.NoSuchElementException;
 
-public class LinkedStack<T> implements Stack<T>{
+public class LinkedStack<T> implements Stack<T> {
 
-    private List<T> LinkedStack;
+    private LinkedList<T> list;
+
+    public LinkedStack() {
+
+    }
 
     @Override
     public boolean isEmpty() {
-        return LinkedStack.isEmpty();
+        return list.isEmpty();
     }
 
     @Override
     public void push(T elm) {
-        LinkedStack.addToFront(elm);
+        list.addToFront(elm);
     }
 
     @Override
     public T pop() throws EmptyStackException {
-     try {
-         return LinkedStack.removeFirst();
-     } catch (EmptyStackException e) {
-         throw new EmptyStackException();
-     }
+        try {
+            return list.removeFirst();
+        } catch (EmptyStackException e) {
+            throw new EmptyStackException();
+        }
     }
 }
