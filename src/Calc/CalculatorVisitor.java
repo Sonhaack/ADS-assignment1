@@ -9,7 +9,7 @@ import java.util.Stack;
 
 public class CalculatorVisitor implements Calculator, Visitor {
 
-    //private Stack<Token> tokenStack;
+    private Token tokenStack;
     private LinkedStack<Token> linkedStack ;
 
 
