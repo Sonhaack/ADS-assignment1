@@ -1,5 +1,6 @@
 package Calc;
 import Exceptions.MalformedExpressionException;
+import List.LinkedStack;
 import Operand.Operand;
 import Operand.Operator;
 import Operand.Token;
@@ -8,14 +9,20 @@ import java.util.Stack;
 
 public class CalculatorVisitor implements Calculator, Visitor {
 
-    private Stack<Token> tokenStack;
+    private Token tokenStack;
+    private LinkedStack linkedStack;
 
-    public CalculatorVisitor() {
-        this.tokenStack = new LinkedStack();
-    }
 
     @Override
     public int getResult() throws MalformedExpressionException {
+        int r;
+
+        try{
+
+        }
+
+
+
         return 0;
     }
 

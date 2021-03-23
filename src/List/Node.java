@@ -1,7 +1,14 @@
 package List;
 
-public class Node {
+public class Node<T> {
+
     private T data;
+    private Node<T> next;
+
+    public Node(T data) {
+        this.data = data;
+    }
+
 
     public void setData(T data) {
         this.data = data;
@@ -12,11 +19,11 @@ public class Node {
     }
 
     public void setNext(Node Node){
-        this.Node = Node;
+        this.next = Node;
     }
 
     public Node getNext(){
-        return Next;
+        return next;
     }
 
 }

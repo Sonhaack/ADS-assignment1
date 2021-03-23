@@ -3,7 +3,7 @@ package List;
 import javax.swing.border.EmptyBorder;
 import java.util.EmptyStackException;
 
-public interface List {
+public interface List<T> {
 
     boolean isEmpty();
     int size();
