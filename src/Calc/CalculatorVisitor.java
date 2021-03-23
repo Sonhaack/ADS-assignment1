@@ -1,5 +1,6 @@
 package Calc;
 import Exceptions.MalformedExpressionException;
+import Operand.Operand;
 import Operand.Operator;
 import Operand.Token;
 
@@ -28,4 +29,11 @@ public class CalculatorVisitor implements Calculator, Visitor {
 
     }
 
+    private void pushOperand(Operand operand){
+        return;
+    }
+
+    private void performOperation(Operator operator) throws MalformedExpressionException {
+        return;
+    }
 }

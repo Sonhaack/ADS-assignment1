@@ -1,5 +1,6 @@
 package Calc;
 
+import Operand.Operand;
 import Operand.Operator;
 
 public interface Visitor {
