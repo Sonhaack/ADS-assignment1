@@ -1,8 +1,7 @@
 package Calc;
 
-import Calc.CalculatorVisitor;
 import Exceptions.MalformedExpressionException;
-import Operand.Token;
+import Operations.Token;
 
 import java.util.ArrayList;
 

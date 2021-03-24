@@ -1,7 +1,7 @@
 package Calc;
 
-import Operand.Operand;
-import Operand.Operator;
+import Operations.Operand;
+import Operations.Operator;
 
 public interface Visitor {
     public void visit(Operand operand);

@@ -2,12 +2,11 @@ package Calc;
 
 import Exceptions.MalformedExpressionException;
 import List.LinkedStack;
-import Operand.Operand;
-import Operand.Operator;
-import Operand.Token;
+import Operations.Operand;
+import Operations.Operator;
+import Operations.Token;
 
 import java.util.EmptyStackException;
-import java.util.Stack;
 
 public class CalculatorVisitor implements Calculator, Visitor {
 
@@ -65,28 +64,29 @@ public class CalculatorVisitor implements Calculator, Visitor {
         int opValue1 = operand1.getValue();
 
         Operand operand2 = (Operand) token2;
-        int opValie2 = operand2.getValue();
+        int opValue2 = operand2.getValue();
 
 // switch for at finde ud af hvilken operation vi skal have lavet
         switch (operator.getOperation()) {
             case ADDITION: {
-                result = opValue1 + opValie2;
+                result =  opValue2 + opValue1 ;
                 break;
             }
             case SUBTRACTION: {
-                result = opValue1 - opValie2;
+                result = opValue2 - opValue1;
                 break;
             }
             case DIVISION: {
-                result = opValue1 / opValie2;
+                result = opValue2 / opValue1;
+                break;
             }
             case MULTIPLICATION: {
-                result = opValue1 * opValie2;
+                result = opValue2 * opValue1;
+                break;
             }
         }
         Operand operand = new Operand();
         operand.setValue(result);
         pushOperand(operand);
-
     }
 }

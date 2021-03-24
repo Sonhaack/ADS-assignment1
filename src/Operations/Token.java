@@ -1,4 +1,4 @@
-package Operand;
+package Operations;
 
 import Calc.CalculatorVisitor;
 
