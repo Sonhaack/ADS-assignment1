@@ -2,16 +2,17 @@ package Testing;
 
 import Calc.Calculator;
 import Calc.CalculatorVisitor;
-import Calc.Client;
+import Operand.Operand;
+import Operand.Operator;
 import Operand.Token;
-import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
-import java.util.Stack;
 
-public class Test {
 
+class CalculatorTest {
     //For testing calulator
     private Calculator calculator;
     private ArrayList<Token> tokens;
@@ -22,7 +23,9 @@ public class Test {
         tokens = new ArrayList<>();
     }
 
+
     //Test for addition
+
 
     //Test for subtraktion
 

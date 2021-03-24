@@ -6,12 +6,13 @@ public class Operator extends Token {
 
     private Operation operation;
 
-    public Operator(Operation operation) {
-        this.operation = operation;
-    }
 
     public Operation getOperation() {
         return operation;
+    }
+
+    public void setOperation(Operation operation) {
+        this.operation = operation;
     }
 
     @Override
@@ -19,10 +20,6 @@ public class Operator extends Token {
         visitor.visit(this);
     }
 
-    public enum Operation{
-        ADDITION,
-        SUBTRACTION,
-        MULTIPLICATION,
-        DIVISION
-    }
+
+
 }
