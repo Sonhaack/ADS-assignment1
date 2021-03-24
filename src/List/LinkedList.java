@@ -4,6 +4,7 @@ import java.util.EmptyStackException;
 
 public class LinkedList<T> implements List<T> {
 
+
     private Node<T> head;
     private int size;
 
