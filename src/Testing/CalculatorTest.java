@@ -66,6 +66,7 @@ class CalculatorTest {
 
         Assertions.assertEquals((operand1.getValue() - operand2.getValue()), client.evaluateExpression(tokens));
     }
+
     //Test for multi
     @Test
     void simpleMultiplication() {
@@ -84,7 +85,6 @@ class CalculatorTest {
     }
 
     //Test division
-
     @Test
     void simpleDivision() {
         Operand operand1 = new Operand();
@@ -102,14 +102,51 @@ class CalculatorTest {
     }
 
     //Test flere operander
+@Test
+void multipleOperanderCalculation(){
+    Operand operand1 = new Operand();
+    Operand operand2 = new Operand();
+    Operand operand3 = new Operand();
+    operand1.setValue(2);
+    operand2.setValue(2);
+    operand3.setValue(3);
 
-    //Test flere operators
+    Operator operator1 = new Operator();
+    operator1.setOperation(Operation.ADDITION);
 
-    //Hvis listen er tom
+    tokens.add(operand1);
+    tokens.add(operand2);
+    tokens.add(operand3);
+    tokens.add(operator1);
 
-    //Hvis vi har tid så synes jeg vi skal lave en for eks multiplikation med, gange, minus what ever og flere operators
+    Assertions.assertEquals(5, client.evaluateExpression(tokens));
 
+}
+//Flere operators
+@Test
+void multipleOperatorsCalculation(){
+    Operand operand1 = new Operand();
+    Operand operand2 = new Operand();
+    Operand operand3 = new Operand();
 
+    operand1.setValue(10);
+    operand2.setValue(2);
+    operand3.setValue(5);
+
+    Operator operator1 = new Operator();
+    operator1.setOperation(Operation.DIVISION);
+    Operator operator2 = new Operator();
+    operator2.setOperation(Operation.MULTIPLICATION);
+    tokens.add(operand1);
+    tokens.add(operand2);
+    tokens.add(operator1);
+    tokens.add(operand3);
+    tokens.add(operator2);
+
+    Assertions.assertEquals(25, client.evaluateExpression(tokens));
+}
+
+    //Flere operands og operators
     @Test
     void notSimpleCalculation(){
         Operand operand1 = new Operand();
@@ -134,6 +171,5 @@ class CalculatorTest {
     }
 
 
-// 1 2 3 * +
 
 }
