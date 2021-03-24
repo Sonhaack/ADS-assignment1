@@ -11,6 +11,10 @@ public class Operand extends Token {
         return value;
     }
 
+    public void setValue(int value) {
+        this.value = value;
+    }
+
     @Override
     public void accept(CalculatorVisitor visitor) {
         visitor.visit(this);

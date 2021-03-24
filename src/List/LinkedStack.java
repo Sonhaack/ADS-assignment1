@@ -5,9 +5,10 @@ import java.util.NoSuchElementException;
 
 public class LinkedStack<T> implements Stack<T> {
 
-    private LinkedList<T> list;
+    private List<T> list;
 
     public LinkedStack() {
+        list = new LinkedList<T>();
 
     }
 
